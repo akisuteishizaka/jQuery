@@ -8,6 +8,9 @@
 	<p>jQueryの練習</p>
 	<button>Add!</button>
 
+	<button>もっと読む！</button>
+	<div id="result"></div>
+
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
@@ -23,6 +26,10 @@
 			*/
 			$('body').on('click', '.vanish', function() {
 				$(this).remove();
+			});
+
+			$('button').click(function() {
+				$('#result').load('more.html');
 			});
 
 
