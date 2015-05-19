@@ -24,7 +24,11 @@
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
-
+			// メソッドを使ったDOM要素の指定
+			// parent(), children()　親要素、子要素
+			// next(), prev()
+			// siblings()　兄弟要素
+			$("#sub > li:eq(2)").siblings().css("color", 'red');
 		});
 	</script>
 </body>
