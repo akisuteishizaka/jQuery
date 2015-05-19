@@ -41,11 +41,12 @@
 			// $.get 今回はデータを取得するだけ
 
 			$('#greet').click(function() {
+
 				$.get('greet.php', {
 					name: $('#name').val()
 				}, function(data) {
 					$('#result').html(data.message + '(' + data.length + ')');
-				})
+				});
 			});
 
 
