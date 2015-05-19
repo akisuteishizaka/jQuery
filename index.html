@@ -6,24 +6,20 @@
 </head>
 <body>
 	<p>jQueryの練習</p>
-	<ul id="main">
-		<li>0</li>
-		<li class="item">1</li>
-		<li class="item">2</li>
-		<li>
-			3
-			<ul id="sub">
-				<li>3-0</li>
-				<li>3-1</li>
-				<li class="item">3-2</li>
-				<li class="item">3-3</li>
-				<li>3-4</li>
-			</ul>
-		</li>
-	</ul>
+	<div id="box" style="width: 100px; height: 100px; background:red;"></div>
+
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
+			// hide. show
+			// fadeOut, fadeIn
+			// toggle
+			// $('#box').hide('800');
+			// $('#box').fadeOut(800);
+			// $('#box').toggle(800);
+			$('#box').fadeOut(800, function(){
+				alert('gone!');
+			});
 
 		});
 	</script>
