@@ -6,25 +6,22 @@
 </head>
 <body>
 	<p>jQueryの練習</p>
-	<ul id="main">
-		<li>0</li>
-		<li class="item">1</li>
-		<li class="item">2</li>
-		<li>
-			3
-			<ul id="sub">
-				<li>3-0</li>
-				<li>3-1</li>
-				<li class="item">3-2</li>
-				<li class="item">3-3</li>
-				<li>3-4</li>
-			</ul>
-		</li>
-	</ul>
+	<a href="http://www.google.com" data-sitename="google">Google</a>
+	<input type="text" value="hello">
+
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
-
+			// text('some text')
+			// html
+			// val(text)
+			// remove, empty
+			// $('p').text();
+			$('p').html('<a href="">click me!</a>');
+			console.log($('input').val());
+			$('input').val('hello, again!');
+			$('p').empty();
+			$('p').remove();
 		});
 	</script>
 </body>
