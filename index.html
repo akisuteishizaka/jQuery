@@ -30,8 +30,14 @@
 				$(this).remove();
 			});*/
 
+			// Ajax
+			// Asynchronous javascript + XML
+			// サーバと通信　＋　ページの書き換え
+			// 非同期：　処理が終わる前に次の処理に移る
+
 			$('button').click(function() {
 				$('#result').load('more.html');
+				$('#message').css('color', 'red');
 			});
 
 
