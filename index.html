@@ -3,28 +3,25 @@
 <head>
 	<meta charset="utf-8">
 	<title>jQueryの練習</title>
+	<style type="text/css">
+		.myStyle {
+			border: 5px solid green;
+			font-size: 49px;
+		}
+	</style>
 </head>
 <body>
 	<p>jQueryの練習</p>
-	<ul id="main">
-		<li>0</li>
-		<li class="item">1</li>
-		<li class="item">2</li>
-		<li>
-			3
-			<ul id="sub">
-				<li>3-0</li>
-				<li>3-1</li>
-				<li class="item">3-2</li>
-				<li class="item">3-3</li>
-				<li>3-4</li>
-			</ul>
-		</li>
-	</ul>
+
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
+			// .css　設定　取得
+			$('p').css('color', 'red').css('background', 'blue');
+			console.log($('p').css('color'));
 
+			// addClass('class_name') removeClass 
+			$('p').addClass('myStyle');
 		});
 	</script>
 </body>
