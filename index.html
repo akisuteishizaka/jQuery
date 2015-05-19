@@ -24,7 +24,15 @@
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
-
+			//フィルターの使い方
+			// :eq()
+			// :gt(), :lt()
+			// :even, :odd
+			// :contains()
+			// :first, :last
+			
+			// $("#sub > li:eq(2)").css('color', 'red');
+			$("#sub > li:contains('4')").css('color', 'red');
 		});
 	</script>
 </body>
