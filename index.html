@@ -6,24 +6,29 @@
 </head>
 <body>
 	<p>jQueryの練習</p>
-	<ul id="main">
-		<li>0</li>
-		<li class="item">1</li>
-		<li class="item">2</li>
-		<li>
-			3
-			<ul id="sub">
-				<li>3-0</li>
-				<li>3-1</li>
-				<li class="item">3-2</li>
-				<li class="item">3-3</li>
-				<li>3-4</li>
-			</ul>
-		</li>
-	</ul>
+	<input type="text" id="name">
+	<select id="members" name="members">
+		<option>taiti</option>
+		<option>test0</option>
+		<option>test1</option>
+	</select>
+
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
+			// focus, blur
+			// change
+			$('#name')
+				.focus(function() {
+					$(this).css('background', 'red');
+				})
+				.blur(function() {
+					$(this).css('background', '#fff');
+				});
+			$('#members')
+				.change(function() {
+					alert('changed!');
+				});
 
 		});
 	</script>
