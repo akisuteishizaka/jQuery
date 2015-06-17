@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>jQueryの練習</title>
+</head>
+<body>
+	<p>jQueryの練習</p>
+	<button>Add!</button>
+
+	<p>
+		<input type="text" name="name" id="name">
+		<input type="button" id="greet" value="Greet!">
+	</p>
+	<div id="result"></div>
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			/*
+			$('button').click(function() {
+				var p = $('<p>').text('vanish').addClass('vanish');
+				$(this).before(p);
+			});*/
+
+			/*
+			$('.vanish').click(function() {
+				$(this).remove();
+			});
+			*/
+			/*
+			$('body').on('click', '.vanish', function() {
+				$(this).remove();
+			});*/
+
+			// Ajax
+			// Asynchronous javascript + XML
+			// サーバと通信　＋　ページの書き換え
+			// 非同期：　処理が終わる前に次の処理に移る
+			// $.post 
+			// $.get 今回はデータを取得するだけ
+
+			$('#greet').click(function() {
+
+				$.get('greet.php', {
+					name: $('#name').val()
+				}, function(data) {
+					$('#result').html(data.message + '(' + data.length + ')');
+				});
+			});
+
+
+		});
+	</script>
+</body>
+</html>
